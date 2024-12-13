@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="4dp"
+    android:background="@color/light_gray"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:textColor="@color/navy"
+        android:text="162"
+        android:textStyle="bold"
+        android:textSize="64dp"
+        android:gravity="bottom|right"
+        android:layout_height="256dp"/>
+
+
+    <LinearLayout
+        style="@style/myLinearLayout">
+
+        <Button
+            android:id="@+id/btnSeven"
+            style="@style/myButton"
+            android:onClick="onDigit"
+            android:text="7" />
+
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnEight"
+            android:text="8" />
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnNine"
+            android:text="9" />
+        <Button
+            style="@style/myButton"
+            android:onClick="onOperator"
+            android:id="@+id/btnMultiply"
+            android:text="X"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/myLinearLayout">
+
+        <Button
+            android:id="@+id/btnFour"
+            style="@style/myButton"
+            android:text="4" />
+
+        <Button
+            android:text="5"
+            android:id="@+id/btnFive"
+            style="@style/myButton" />
+        <Button
+            style="@style/myButton"
+            android:text="6"
+            android:id="@+id/btnSix" />
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnMinus"
+            android:onClick="onOperator"
+            android:text="-" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/myLinearLayout">
+
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnOne"
+            android:text="1" />
+
+        <Button
+            style="@style/myButton"
+            android:text="2"
+            android:id="@+id/btnTwo" />
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnThree"
+            android:text="3"/>
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnAdd"
+            android:onClick="onOperator"
+            android:text="+"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/myLinearLayout">
+
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnZero"
+            android:layout_weight=".65"
+            android:text="0"/>
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnDot"
+            android:onClick="onDecimalPoint"
+            android:text="."/>
+        <Button
+            style="@style/myButton"
+            android:id="@+id/btnDivide"
+            android:onClick="onOperator"
+            android:text="/"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        style="@style/myLinearLayout">
+        <Button
+            style="@style/myButton"
+            android:layout_weight="0.35"
+            android:onClick="onEqual"
+            android:text="="
+            android:id="@+id/btnEqualto"/>
+        <Button
+            android:layout_weight="1"
+            android:textSize="16dp"
+            style="@style/myButton"
+            android:onClick="onClaer"
+            android:textColor="@color/yellow"
+            android:text="CLR"
+            android:id="@+id/btnClear"/>
+
+    </LinearLayout>
+</LinearLayout>
